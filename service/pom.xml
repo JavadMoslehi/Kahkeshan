@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--================================================================================================-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--================================================================================================-->
+    <!--
+    This <parent>,/parent> tag tells current project is child of what project and
+    its parent information,
+    -->
+    <parent>
+        <artifactId>springmvcdemo</artifactId>
+        <groupId>com.padisarinc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>service</artifactId>
+    <!--================================================================================================-->
+    <!--
+    packaging means what is output of this project? jar or war?
+    Because this project has no output and only is an aggregator, its packaging is "jar"
+    -->
+    <packaging>jar</packaging>
+    <!--================================================================================================-->
+    <!--
+    packaging means what is output of this project? jar or war?
+    Because this project has jar output, its packaging is "jar"
+    -->
+    <name>service (Only for business layer and no logic)</name>
+    <!--================================================================================================-->
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+    <!--================================================================================================-->
+    <dependencies>
+        <dependency>
+            <groupId>com.padisarinc</groupId>
+            <artifactId>repository</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.1.0.RELEASE</version>
+        </dependency>
+    </dependencies>
+    <!--================================================================================================-->
+</project>

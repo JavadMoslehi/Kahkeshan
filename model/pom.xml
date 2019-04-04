@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!--======================================================================-->
+    <modelVersion>4.0.0</modelVersion>
+    <!--======================================================================-->
+    <!--
+    This <parent>,/parent> tag tells current project is child of what project and
+    its parent information,
+    -->
+    <parent>
+        <artifactId>springmvcdemo</artifactId>
+        <groupId>com.padisarinc</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>model</artifactId>
+    <!--======================================================================-->
+    <!--
+    packaging means what is output of this project? jar or war?
+    Because this project has jar output, its packaging is "jar"
+    -->
+    <packaging>jar</packaging>
+    <!--======================================================================-->
+    <!--
+    Name tag is for naming in building, cleaning and the other maven operation in terminal
+    and any name you choose for the project in this tag <name></name>, also in terminal
+    exist same name
+    -->
+    <name>model (special for POJO class)</name>
+    <!--======================================================================-->
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+    <!--======================================================================-->
+    <dependencies>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.3.6.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.1.3.Final</version>
+        </dependency>
+    </dependencies>
+    <!--======================================================================-->
+</project>

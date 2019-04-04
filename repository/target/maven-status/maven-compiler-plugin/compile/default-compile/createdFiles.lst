@@ -1,0 +1,3 @@
+com\padisarinc\config\HibernateConfig.class
+com\padisarinc\dao\PersonDaoImpl.class
+com\padisarinc\dao\PersonDao.class
