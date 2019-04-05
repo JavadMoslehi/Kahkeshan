@@ -22,18 +22,18 @@
                 <form:form action="save" method="post" modelAttribute="person">
                     <tr>
                         <td align="left" width="20%">Name: </td>
-                        <td align="left" width="40%"><form:input path="name" size="30"/></td>
-                        <td align="left"><form:errors path="name" cssClass="error"/></td>
+                        <td align="left" width="40%">   <form:input     path="name" size="30"       /></td>
+                        <td align="left">               <form:errors    path="name" cssClass="error"/></td>
                     </tr>
                     <tr>
                         <td>Family: </td>
-                        <td><form:input path="family" size="30"/></td>
-                        <td><form:errors path="family" cssClass="error"/></td>
+                        <td><form:input     path="family" size="30"         /></td>
+                        <td><form:errors    path="family" cssClass="error"  /></td>
                     </tr>
                     <tr>
                         <td>Age: </td>
-                        <td><form:input path="age" size="30"/></td>
-                        <td><form:errors path="age" cssClass="error"/></td>
+                        <td><form:input     path="age" size="30"        /></td>
+                        <td><form:errors    path="age" cssClass="error" /></td>
                     </tr>
                     <tr>
                         <td></td>

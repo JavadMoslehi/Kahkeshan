@@ -7,6 +7,8 @@ import com.padisarinc.servicecontract.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Transactional
 /**
  * @Service is Like @Component, it's child of @Component
@@ -30,5 +32,10 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void update(Person person) {
         personDao.update(person);
+    }
+
+    @Override
+    public List<Person> getList() {
+        return personDao.getList();
     }
 }
