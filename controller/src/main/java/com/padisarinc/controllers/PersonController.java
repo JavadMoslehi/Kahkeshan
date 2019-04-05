@@ -21,7 +21,6 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-
     /**
      * You can write this method instead of below method
      *     @RequestMapping(method = RequestMethod.GET)
@@ -36,13 +35,14 @@ public class PersonController {
         return "index";
     }
 
-
     //@PostMapping(value = "/save")//@RequestMapping(value = "/save", method = RequestMethod.POST)//equals @PostMapping("/save")
     @RequestMapping(value = "/save", method = RequestMethod.POST)//equals @PostMapping("/save")
     public String save(@Valid @ModelAttribute("person") Person person, BindingResult bindingResult) {
+
         if(bindingResult != null) {
             return "index";
         }
+
         System.out.println(person);
         personService.save(person);
         return "done";

@@ -1,5 +1,6 @@
-package com.padisarinc.dao;
+package com.padisarinc.dao.daocontractimpl;
 
+import com.padisarinc.dao.daocontract.PersonDao;
 import com.padisarinc.entities.Person;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,15 @@ public class PersonDaoImpl implements PersonDao {
     @Override
     public void save(Person person) {
         sessionFactory.openSession().save(person);
+    }
+
+    @Override
+    public void delete(Person person) {
+        sessionFactory.openSession().delete(person);
+    }
+
+    @Override
+    public void update(Person person) {
+        sessionFactory.openSession().update(person);
     }
 }

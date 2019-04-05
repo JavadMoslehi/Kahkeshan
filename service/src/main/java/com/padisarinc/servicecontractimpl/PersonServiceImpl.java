@@ -1,20 +1,34 @@
 package com.padisarinc.servicecontractimpl;
 
-import com.padisarinc.dao.PersonDao;
 import com.padisarinc.entities.Person;
+import org.springframework.stereotype.Service;
+import com.padisarinc.dao.daocontract.PersonDao;
 import com.padisarinc.servicecontract.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
-@Service//This is Like @Component, it is child of @Component
+/**
+ * @Service is Like @Component, it's child of @Component
+ */
+@Service
 public class PersonServiceImpl implements PersonService {
+
     @Autowired
     private PersonDao personDao;
 
     @Override
     public void save(Person person) {
         personDao.save(person);
+    }
+
+    @Override
+    public void delete(Person person) {
+        personDao.delete(person);
+    }
+
+    @Override
+    public void update(Person person) {
+        personDao.update(person);
     }
 }
