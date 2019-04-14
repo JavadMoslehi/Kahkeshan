@@ -1,5 +1,5 @@
+com\padisarinc\config\ContextListener.class
 com\padisarinc\config\AppInitializer.class
 com\padisarinc\config\SessionListener.class
 com\padisarinc\config\WebMvcConfig.class
-com\padisarinc\config\ContextListener.class
 com\padisarinc\controllers\PersonController.class

@@ -1,3 +1,3 @@
-D:\Github Repository\spring mvc demo\repository\src\main\java\com\padisarinc\dao\PersonDao.java
+D:\Github Repository\spring mvc demo\repository\src\main\java\com\padisarinc\dao\daocontractimpl\PersonDaoImpl.java
+D:\Github Repository\spring mvc demo\repository\src\main\java\com\padisarinc\dao\daocontract\PersonDao.java
 D:\Github Repository\spring mvc demo\repository\src\main\java\com\padisarinc\config\HibernateConfig.java
-D:\Github Repository\spring mvc demo\repository\src\main\java\com\padisarinc\dao\PersonDaoImpl.java

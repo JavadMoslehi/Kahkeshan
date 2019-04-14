@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <!--======================================================================-->
-  <groupId>com.padisarinc</groupId>
-  <artifactId>springmvcdemo</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <!--======================================================================-->
-  <!--=======================Project modules================================-->
-  <modules>
-    <module>repository</module>
-    <module>service</module>
-    <module>model</module>
-    <module>controller</module>
-  </modules>
-  <!--=======================Project modules================================-->
-  <!--======================================================================-->
-  <!--======================================================================-->
-  <!--
-  packaging means what is output of this project? jar or war?
-  Because this project has no output and only is an aggregator, its packaging is "pom"
-  -->
-  <packaging>pom</packaging>
-  <!--======================================================================-->
-  <!--======================================================================-->
-  <!--
-  Name tag is for naming in building, cleaning and the other maven operation in terminal
-  and any name you choose for the project in this tag <name></name>, also in terminal
-  exist same name
-  -->
-  <name>spring mvc demo</name>
-  <!--=======================project name===================================-->
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
-  <!--======================================================================-->
-  <!--==========================Variable defining===========================-->
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <log4j.version>1.2.14</log4j.version>
-    <spring-context.version>5.1.0.RELEASE</spring-context.version>
-    <spring-core.version>5.1.0.RELEASE</spring-core.version>
-    <spring-orm.version>5.1.0.RELEASE</spring-orm.version>
-    <spring-tx.version>5.1.0.RELEASE</spring-tx.version>
-    <junit.version>4.11</junit.version>
-  </properties>
-  <!--==========================Variable defining===========================-->
-  <!--==========================Dependencies defining=======================-->
-  <dependencies>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${spring-context.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-core</artifactId>
-      <version>${spring-core.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-orm</artifactId>
-      <version>${spring-orm.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${spring-tx.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-  <!--==========================Dependencies defining=======================-->
-  <!--<build>-->
-  <!--<plugins>-->
-  <!--<plugin>-->
-  <!--<artifactId>maven-compiler-plugin</artifactId>-->
-  <!--<version>3.1</version>-->
-  <!--<configuration>-->
-  <!--<source>1.8</source>-->
-  <!--<target>1.8</target>-->
-  <!--<fork>true</fork>-->
-  <!--<executable>C:\Program Files\Java\jdk1.8.0_172\bin\javac</executable>-->
-  <!--</configuration>-->
-  <!--</plugin>-->
-  <!--</plugins>-->
-  <!--</build>-->
+         xsi:schemaLocation=    "http://maven.apache.org/POM/4.0.0
+                                http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--======================================================================-->
+    <groupId>com.padisarinc</groupId>
+    <artifactId>springmvcdemo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <!--======================================================================-->
+    <!--=======================Project modules================================-->
+    <modules>
+        <module>repository</module>
+        <module>service</module>
+        <module>model</module>
+        <module>controller</module>
+    </modules>
+    <!--=======================Project modules================================-->
+    <!--======================================================================-->
+    <!--======================================================================-->
+    <!--
+    packaging means what is output of this project? jar or war?
+    Because this project has no output and only is an aggregator, its packaging is "pom"
+    -->
+    <packaging>pom</packaging>
+    <!--======================================================================-->
+    <!--======================================================================-->
+    <!--
+    Name tag is for naming in building, cleaning and the other maven operation in terminal
+    and any name you choose for the project in this tag <name></name>, also in terminal
+    exist same name
+    -->
+    <name>spring mvc demo</name>
+    <!--=======================project name===================================-->
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+    <!--======================================================================-->
+    <!--==========================Variable defining===========================-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <log4j.version>1.2.14</log4j.version>
+        <spring-context.version>5.1.0.RELEASE</spring-context.version>
+        <spring-core.version>5.1.0.RELEASE</spring-core.version>
+        <spring-orm.version>5.1.0.RELEASE</spring-orm.version>
+        <spring-tx.version>5.1.0.RELEASE</spring-tx.version>
+        <junit.version>4.11</junit.version>
+    </properties>
+    <!--==========================Variable defining===========================-->
+    <!--==========================Dependencies defining=======================-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring-context.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring-core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring-orm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring-tx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <!--==========================Dependencies defining=======================-->
+    <!--<build>-->
+    <!--<plugins>-->
+    <!--<plugin>-->
+    <!--<artifactId>maven-compiler-plugin</artifactId>-->
+    <!--<version>3.1</version>-->
+    <!--<configuration>-->
+    <!--<source>1.8</source>-->
+    <!--<target>1.8</target>-->
+    <!--<fork>true</fork>-->
+    <!--<executable>C:\Program Files\Java\jdk1.8.0_172\bin\javac</executable>-->
+    <!--</configuration>-->
+    <!--</plugin>-->
+    <!--</plugins>-->
+    <!--</build>-->
 
 </project>

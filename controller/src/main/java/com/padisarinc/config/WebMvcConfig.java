@@ -25,6 +25,7 @@ import org.springframework.web.servlet.theme.ThemeChangeInterceptor;
 import org.springframework.web.servlet.view.BeanNameViewResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import javax.transaction.TransactionManager;
@@ -38,13 +39,13 @@ import java.util.Properties;
  * @EnableAsync
  * @EnableWebMvc shows this class is related to configuration web mvc
  * @ComponentScan means in what package look up classes with @Component annotation
- *
  */
 @Configuration
 @EnableAsync
 @EnableWebMvc
 @ComponentScan("com")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
+
     @Autowired
     private Environment environment;
 
@@ -85,5 +86,35 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         final Map<String, String> parameterMap = new HashMap<>();
         parameterMap.put("charset", "utf-8");
         configurer.defaultContentType(new MediaType(MediaType.APPLICATION_JSON, parameterMap));
+    }
+
+    /**
+     * This is for supporting internationalization
+     *
+     * @return
+     */
+    @Bean
+    public MessageSource messageSource() {
+        ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
+        resourceBundleMessageSource.setBasename("message");
+        resourceBundleMessageSource.setDefaultEncoding("UTF-8");
+        ;
+        resourceBundleMessageSource.setUseCodeAsDefaultMessage(true);
+        return resourceBundleMessageSource;
+    }
+
+    @Bean
+    public LocaleResolver localeResolver() {
+        CookieLocaleResolver cookieLocaleResolver = new CookieLocaleResolver();
+        cookieLocaleResolver.setDefaultLocale(new Locale("fa"));
+        return cookieLocaleResolver;
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry interceptorRegistry) {
+        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+        localeChangeInterceptor.setParamName("lang");
+        interceptorRegistry.addInterceptor(localeChangeInterceptor);
+
     }
 }
